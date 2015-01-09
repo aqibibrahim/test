@@ -30,6 +30,7 @@
         <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="phonegap-1.4.1.js"></script>
         <script type="text/javascript">
             
             document.addEventListener("device ready",onDeviceReady,false);
@@ -41,7 +42,7 @@
             }
             
             function createDB(tx){
-                //tx.executeSql('DROP TABLE IF EXISTS DEMO');
+                tx.executeSql('DROP TABLE IF EXISTS DEMO');
                 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO(title,image,description)');
             }
             function errorCB(err){
